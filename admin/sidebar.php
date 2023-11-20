@@ -24,7 +24,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
     <li class="mb-2 menu-item <?php echo ($current_page === 'datauser.php') ? 'active open' : ''; ?>">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons ti ti-users"></i>
-            <div data-i18n="Users">Users</div>
+            <div data-i18n="Data User">Data User</div>
         </a>
         <ul class="menu-sub">
             <li class="menu-item <?php echo ($current_page === 'datauser.php') ? 'active' : ''; ?>">
@@ -37,7 +37,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
 
     <li class="menu-item <?php echo (in_array($current_page, array( 'datakopi.php', 'datalahan.php', 'data.php'))) ? 'active open' : ''; ?>">
     <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-users"></i>
+        <i class="menu-icon ti ti-box"></i>
         <div data-i18n="Data Produk">Data Produk</div>
     </a>
     <ul class="menu-sub">

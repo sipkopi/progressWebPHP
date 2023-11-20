@@ -11,7 +11,7 @@ if (isset($_POST["kodelahan"])) {
     $latitude = $_POST["latitude"];
     
 
-    $connection = mysqli_connect("localhost", "root", "", "sipkopi");
+    $connection = mysqli_connect("localhost", "root", "", "sipkopi_test");
     
     if (!$connection) {
         die("Koneksi ke database gagal: " . mysqli_connect_error());

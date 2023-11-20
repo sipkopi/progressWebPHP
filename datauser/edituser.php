@@ -89,7 +89,7 @@ function confirmEdit(event) {
                           src="<?= $swa["gambar"] ?>"
                           alt="user-avatar"
                           class="d-block w-px-100 h-px-100 rounded"
-                          name="upload"
+                          name="uploada"
                           id="uploadedAvatar" />
                         <div class="button-wrapper">
                           <label for="upload" class="btn btn-primary me-2 mb-3" tabindex="0">
@@ -158,11 +158,10 @@ function confirmEdit(event) {
                           </div>
 
                         </div>
-                        <div class="mt-4">
+                        <div class="mt-5 text-end">
                           
-                          <button type="submit"  id="accountActivation" class="btn btn-primary me-2">Simpan Data</button>
-                          
-                          <a class="btn btn-label-danger" href="datauser.php">Kembali </a>
+                          <button type="submit"  id="accountActivation" class="btn btn-primary me-3">Simpan Data</button>
+                          <a class="btn btn-danger" href="datauser.php">Kembali </a>
                           
                         </div>
                         </form>
