@@ -6,7 +6,6 @@ if (!isset($_SESSION['nama'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html
   lang="en"

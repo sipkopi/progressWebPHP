@@ -110,12 +110,11 @@ $swa = query("SELECT * FROM data_lahan WHERE kode_lahan = '$kode_lahan'")[0];
                           </div>
 
                         </div>
-                        <div class="mt-4">
+                        <div class="mt-5 text-end">
                           
-                          <button type="submit" id="accountActivation" class="btn btn-primary me-2">Simpan Data</button>
-                          
-                          <a class="btn btn-label-danger" href="datalahan.php">Kembali </a>
-                          
+                          <button type="submit" id="accountActivation" class="btn btn-primary me-3">Simpan Data</button>
+                          <a class="btn btn-danger" href="datalahan.php">Kembali </a>
+
                         </div>
                         </form>
                     </div>
