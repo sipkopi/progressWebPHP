@@ -1,4 +1,4 @@
 # progressWebPHP
-Team SIP-KOPI TRACE 
+Team WebDev SIP-KOPITRACE 
 - Yuwandana (nim)
 - Aditya Hari Kurniawan (nim)
