@@ -47,13 +47,15 @@ $swa = query("SELECT * FROM data_peremajaan WHERE kode_peremajaan = '$kode_perem
                           <div class="mb-3 col-md-6">
                             <label for="lastName" class="form-label">Kode Lahan</label>
                             <select name="kodelahan" class="select2 form-select">
+                            <option hidden value="<?= $swa["kode_lahan"] ?>"><?= $swa["kode_lahan"] ?></option>
+                            <option value=""></option>
                                   <?php
-                                  $nama_pengguna = $_SESSION['user'];
-                                  $vari_query = mysqli_query($koneksi, "SELECT kode_lahan, user, varietas_pohon FROM data_lahan WHERE user = '$nama_pengguna'"); // Ganti 'nama_pengguna' dengan nama kolom yang sesuai
+                                  $kode = $swa["kode_lahan"];
+                                  $vari_query = mysqli_query($koneksi, "SELECT kode_lahan FROM data_lahan WHERE NOT kode_lahan = '$kode'"); // Ganti 'nama_pengguna' dengan nama kolom yang sesuai
                                   
                                   if ($vari_query) {
                                       while ($getdataa = mysqli_fetch_assoc($vari_query)) {
-                                          echo "<option value='" . $getdataa["kode_lahan"] . "'>" . $getdataa["kode_lahan"] ." ". $getdataa["varietas_pohon"] . "</option>";
+                                          echo "<option value='" . $getdataa["kode_lahan"] . "'>" . $getdataa["kode_lahan"] . "</option>";
                                       }
                                   } else {
                                       echo "<option value=''>Data lahan tidak tersedia</option>";
