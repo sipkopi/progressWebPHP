@@ -1,7 +1,7 @@
 .btn {
   border-width: 2px;
 }
-img,
+.lc,
 .card-wrap,
 .card-wrapper,
 .video-wrapper,
@@ -1287,10 +1287,7 @@ a {
     padding: 1rem;
   }
 }
-.cid-tVmzBUqv54 {
-  display: flex;
-  background-image: url("../../../assets/images/panenkopi-2.png");
-}
+
 .cid-tVmzBUqv54 .mbr-overlay {
   background-color: #000000;
   opacity: 0.5;
@@ -2947,11 +2944,7 @@ a {
     padding: 1rem;
   }
 }
-.cid-tVnh3Xyltb {
-  padding-top: 9rem;
-  padding-bottom: 6rem;
-  background-image: url("../../../assets/images/leonardo-diffusion-xl-create-a-compelling-background-image-for-1.jpg");
-}
+
 .cid-tVnh3Xyltb .mbr-fallback-image.disabled {
   display: none;
 }

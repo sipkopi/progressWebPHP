@@ -26,6 +26,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 [class^="socicon-"], [class*=" socicon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'Socicon' !important;
