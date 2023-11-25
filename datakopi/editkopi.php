@@ -52,12 +52,13 @@ $swa = query("SELECT * FROM data_kopi WHERE kode_kopi = '$kode_kopi'")[0];
 
                           <div class="mb-3 col-md-6">
                             <label for="lastName" class="form-label">Kode Peremajaan</label>
-                            <select name="pere" value="<?= $swa["kode_peremajaan"] ?>" class="select2 form-select">
-                            
+                            <select name="pere" class="select2 form-select">
+                            <option hidden value="<?= $swa["kode_peremajaan"] ?>"><?= $swa["kode_peremajaan"] ?></option>
+                            <option value=""></option>
                                   <?php
                                  
                                   $kode_peremajaan = $swa["kode_peremajaan"];
-                                  $vari_query = mysqli_query($koneksi, "SELECT kode_peremajaan FROM data_peremajaan WHERE kode_peremajaan = '$kode_peremajaan'"); // Ganti 'nama_pengguna' dengan nama kolom yang sesuai
+                                  $vari_query = mysqli_query($koneksi, "SELECT kode_peremajaan FROM data_peremajaan WHERE NOT kode_peremajaan = '$kode_peremajaan'"); // Ganti 'nama_pengguna' dengan nama kolom yang sesuai
                                   
                                   if ($vari_query) {
                                       while ($getdataa = mysqli_fetch_assoc($vari_query)) {

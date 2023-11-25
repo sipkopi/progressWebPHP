@@ -47,12 +47,12 @@ $swa = query("SELECT * FROM data_lahan WHERE kode_lahan = '$kode_lahan'")[0];
 
                           <div class="mb-3 col-md-6">
                             <label for="lastName" class="form-label">User</label>
-                            <select name="user" value="<?= $swa["user"] ?>" class="select2 form-select">
-                            
+                            <select name="user" placeholder="<?= $swa["user"] ?>"  class="select2 form-select">
+                              <option hidden value="<?= $swa["user"] ?>"><?= $swa["user"] ?></option>
+                            <option value=""></option>
                                   <?php
-                                  $nama_pengguna = $_SESSION['user'];
-                                  $vari_query = mysqli_query($koneksi, "SELECT user FROM data_user WHERE user = '$nama_pengguna'"); // Ganti 'nama_pengguna' dengan nama kolom yang sesuai
-                                  
+                                $nama_pengguna = $swa["user"];
+                                $vari_query = mysqli_query($koneksi, "SELECT user FROM data_user WHERE user != '$nama_pengguna' AND level != 'Admin'");                                 
                                   if ($vari_query) {
                                       while ($getdataa = mysqli_fetch_assoc($vari_query)) {
                                           echo "<option value='" . $getdataa["user"] . "'>" . $getdataa["user"] . "</option>";
