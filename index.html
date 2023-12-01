@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assetsFN/images/logo-toko-kopi-modern-coklat-putih-1.png" type="image/x-icon">
   <meta name="description" content="">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   
   <title>Home</title>
   <link rel="stylesheet" href="assetsFN/web/assets/mobirise-icons2/mobirise2.css">
@@ -24,7 +25,7 @@
   <link rel="preload" as="style" href="assetsFN/mobirise/css/mbr-additional.css">
   <link rel="stylesheet" href="assetsFN/mobirise/css/mbr-additional.css" type="text/css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   
 </head>
@@ -90,12 +91,41 @@
     text-align: left;
 	font-family: "Arial", sans-serif; /* Mengubah jenis font pada elemen card */
   }
-  .card h2, .card p {
+  /* .card h2, .card p {
   opacity: 0; /* Sembunyikan judul dan deskripsi */
-  transition: opacity 0.5s ease; /* Efek transisi saat muncul */
-}
+  /* transition: opacity 0.5s ease; Efek transisi saat muncul
+} */ 
 
- 
+ .cardC{
+	height: 370px;
+	width: 485px;
+	padding: 25px;
+    position: absolute;
+    left: 210px; /* Letak card di samping kiri */
+    top: 50%; /* Posisi tengah vertikal */
+    transform: translateY(-50%);
+    
+    background-color: rgba(30, 31, 30, 0.8); /* Warna background card dengan kejernihan 0.8 */
+	color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+	font-family: "Arial", sans-serif; /* Mengubah jenis font pada elemen card */
+ }
+ .cardC h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+	margin-top: 1px ;
+	margin-left: 1px;
+	font-weight: bold;
+  }
+  .cardC p {
+    font-size: 20px;
+    margin-bottom: 20px;
+	margin-top: 10px;
+	margin-left: 1px;
+	word-spacing: 3px;
+  }
 
 
   .card h2 {
@@ -132,32 +162,64 @@
 	background-color:rgb(109, 106, 106)
 	  }
 
+	  /* Contoh media query untuk perangkat dengan lebar maksimum 768px */
+@media screen and (max-width: 768px) {
+
+	.navbar {
+width: 80%;
+
+	}
+  .card,
+  .cardC {
+	height: 40%;
+    width: 80%; /* Sesuaikan lebar kartu dengan layar */
+    left: 10%; /* Pusatkan kartu di tengah */
+    transform: translateX(-50%, -50%);
+    margin-top: 20px; /* Atur jarak antar kartu */;
+  }
+  
+  /* Atur ukuran teks dan gaya lain sesuai kebutuhan */
+  .card h2,
+  .cardC h2,
+  .card p,
+  .cardC p {
+    font-size: 18px;
+	
+  }
+  
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+
 </style>
 <section class="csr" id="sip">
-	<div id="carouselExample" class="carousel slide carousel-fade">
+	<div id="carouselExample" class="carousel slide carousel-fade"  data-bs-ride="carousel">
 	  <div class="carousel-inner" >
-		<div class="carousel-item active">
+		<div class="carousel-item active" data-bs-interval="2000">
 		  <img src="assetsFN/images/leo.jpg" class="d-block w-100 cc" alt="...">
 		  <div class="card">
-			<h2  data-aos="fade-right" data-aos-duration="1000">Environment, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta!</h2>
-			<p data-aos="fade-right" data-aos-duration="1000">Environment dolor sit amet consectetur adipisicing elit. Perspiciatis fugiat quas est hic dolorum inventore ipsum perferendis dolores ducimus voluptate?</p>
-			<a href="#" class="btn">Tombol</a>
+			<h2  data-aos="fade-right" data-aos-duration="1000">Memberikan Ketelusuran dalam Rantai Pasokan Kopi Global yang Kompleks dan Dinamis</h2>
+			<p data-aos="fade-right" data-aos-duration="1000">Kami memperbaiki masalah rantai pasokan yang rusak dengan meningkatkan transparansi data dalam industri kopi.</p>
+			<a href="Contacts.html" class="btn">Diskusi Dengan Ahli</a>
 		  </div>
 		</div>
-		<div class="carousel-item">
+		<div class="carousel-item" data-bs-interval="2000"> 
 		  <img src="assetsFN/images/leo3.jpg" class="d-block w-100 cc" alt="...">
 		  <div class="card">
-			<h2 data-aos="fade-right" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis.</h2>
-			<p data-aos="fade-right" data-aos-duration="1000">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptatibus neque debitis dignissimos error natus amet!.</p>
-			<a href="#" class="btn">Tombol</a>
+			<h2 data-aos="fade-right" data-aos-duration="1000">Meningkatkan Produktivitas Pertanian Kopi dan Meningkatkan Pendapatan Produsen</h2>
+			<p data-aos="fade-right" data-aos-duration="1000">Kami memberdayakan produsen kopi untuk mengangkat lebih banyak orang keluar dari kemiskinan dengan mempertimbangkan perlindungan lingkungan. Manusiawi, Bumi, Keuntungan.</p>
+			<a href="Contacts.html" class="btn">Diskusi Dengan Ahli</a>
 		  </div>
 		</div>
-		<div class="carousel-item">
+		<div class="carousel-item" data-bs-interval="2000">
 		  <img src="assetsFN/images/leo2.jpg" class="d-block w-100 cc" alt="...">
-		  <div class="card">
-			<h2 data-aos="fade-right" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-			<p data-aos="fade-right" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil voluptatibus quos dolores. Alias et quia nostrum dolore!</p>
-			<a href="#" class="btn">Tombol</a>
+		  <div class="cardC">
+			<h2 data-aos="fade-right" data-aos-duration="1000">Mengaktifkan Rantai Pasokan Kopi Global agar Inklusif, Ramah Lingkungan, dan Dapat Ditelusuri.</h2>
+			<p data-aos="fade-right" data-aos-duration="1000">Kami mendukung bisnis dengan mendigitalkan dan memverifikasi rantai pasokan global, melalui teknologi yang berpusat pada manusia dan solusi yang merangkul keberadaan langsung di lapangan.</p>
+			<a href="Contacts.html" class="btn">Diskusi Dengan Ahli</a>
 		  </div>
 		</div>
 	  </div>
@@ -254,17 +316,57 @@
 	</div>
 </section>
 
-<section data-bs-version="5.1" class="footer1 cid-tVmLSZ2TgD" once="footers" id="footer01-9">
-	
 
-	
-	
+
+<section data-bs-version="5.1" class="footer1 cid-tVmLSZ2TgD" once="footers" id="footer01-9">
+
 	<div class="container">
 		<div class="row mbr-white">
-			<div class="col-12 col-md-6 col-lg-3">
-				<h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5">
-				
+
+			<div class=" col-lg-3" style="margin-right: 50px;">
+				<div class=" mb-2 mbr-section-subtitle mbr-fonts-style mb-2 display-5">
+					<img src="./assetsFN/images/logo1.png" class="ssig" alt="">
+				</div>
+				<br>
+				<div class=" mt-2 d-flex align-items-center ">
+					<div class="soc-item">
+						<a href="">
+							<img src="./assetsFN/images/youtube.png" alt="" style="width: 45px; height: 45px;">
+							
+						</a>
+					</div>
+					
+					
+					<div class="soc-item">
+						<a href="https://www.instagram.com/taylorswift/?hl=en" target="_blank">
+							<img src="./assetsFN/images/instagram.png" alt="" style="width: 40px; height: 40px;">
+						</a>
+					</div>
+					</div>
 			</div>
+			<style>
+				.ssig {
+					width: 95px; /* Mengubah ukuran gambar */
+					height: auto; /* Menggunakan height auto agar tidak terlalu kecil di perangkat mobile */
+					 /* Menengahkan gambar di dalam parent */
+
+				}
+				.soc-item {
+        margin-bottom: 10px; /* Adjust the space between social icons and the line */
+		padding-top: 20%;
+    }
+		
+				@media (max-width: 767px) {
+					.ssig {
+						display:block ; /* Mengubah display agar bisa ditengah */
+						width: 60px; /* Mengurangi ukuran gambar di perangkat mobile */
+						margin: 0 auto;
+					}
+					.sst{
+						display: none;
+					}
+				}
+			</style>
 		
 			<div class="col-12 col-md-6 col-lg-3">
 				<h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5">
@@ -291,34 +393,18 @@
 			</div>
 			<hr class="bg-dark mt-4">
 
-			<div class="col-12 mt-3 footer-co d-flex justify-content-center align-items-center">
-
-				<div class="mbr-section-btn align-items-left me-5">
-					<a class="text-dark display-7 " href="#">Powered By Sip Kopi</a>
+			<div class="col-12 mt-3 text-center"> 
+				<div class="d-flex justify-content-center align-items-center">
+					<h6 class="text-dark">@2023 Powered By <a class="text-success mt-2" href="sipkopi.com">Sip Kopi.</a> ALL rights reserved</h6>
 				</div>
-
-				<div class="social-row mt-2 display-7">
-					<div class="soc-item">
-						<a href="">
-							<span class="mbr-iconfont socicon socicon-facebook"></span>
-						</a>
-					</div>
-					
-					</div>
-					<div class="soc-item">
-						<a href="https://www.instagram.com/taylorswift/?hl=en" target="_blank">
-							<span class="mbr-iconfont socicon-instagram socicon"></span>
-						</a>
-					</div>
-					
+			</div>
+			
+			
 				</div>
 			</div>
 			
 		</div>
 	</div>
-</section>
-<section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;">
-		<img class="lc" alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
 </section>
 
 <script src="assetsFN/bootstrap/js/bootstrap.bundle.min.js"></script>
