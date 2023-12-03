@@ -12,18 +12,35 @@ switch ($method) {
  echo json_encode($result);
  break;
 
-//  case 'POST':
-//  // Create operation (add a new book)
-//  $data = json_decode(file_get_contents('php://input'), true);
-//  $title = $data['title'];
-//  $author = $data['author'];
-//  $published_at = $data['published_at'];
- 
-//  $stmt = $pdo->prepare('INSERT INTO books (title, author, published_at) VALUES (?, ?, ?)');
-//  $stmt->execute([$title, $author, $published_at]);
- 
-//  echo json_encode(['message' => 'Book added successfully']);
-//  break;
+ case 'POST':
+    // Create operation (add a new user)
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    // Check if required fields are present
+    if (!isset($data['user']) || !isset($data['pass'])) {
+        http_response_code(400);
+        echo json_encode(['message' => 'Username dan password harus diisi']);
+        break;
+    }
+
+    $user = $data['user'];
+    $nama = isset($data['nama']) ? $data['nama'] : null;
+    $email = isset($data['email']) ? $data['email'] : null;
+    $nohp = isset($data['nohp']) ? $data['nohp'] : null;
+    $pass = $data['pass'];
+    $lokasi = isset($data['lokasi']) ? $data['lokasi'] : null;
+    $level = isset($data['level']) ? $data['level'] : null;
+    
+    // Set tanggal_create to current datetime
+    $tanggal_create = date('Y-m-d H:i:s');
+
+    $gambar = isset($data['gambar']) ? $data['gambar'] : null;
+
+    $stmt = $pdo->prepare('INSERT INTO data_user (user, nama, email, nohp, pass, lokasi, level, tanggal_create, gambar) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+    $stmt->execute([$user, $nama, $email, $nohp, $pass, $lokasi, $level, $tanggal_create, $gambar]);
+
+    echo json_encode(['message' => 'Data User Berhasil Ditambah']);
+    break;
 
 //  case 'PUT':
 //  // Update operation (edit a book)

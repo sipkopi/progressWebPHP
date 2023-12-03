@@ -12,18 +12,46 @@ switch ($method) {
  echo json_encode($result);
  break;
 
-//  case 'POST':
-//  // Create operation (add a new book)
-//  $data = json_decode(file_get_contents('php://input'), true);
-//  $title = $data['title'];
-//  $author = $data['author'];
-//  $published_at = $data['published_at'];
- 
-//  $stmt = $pdo->prepare('INSERT INTO books (title, author, published_at) VALUES (?, ?, ?)');
-//  $stmt->execute([$title, $author, $published_at]);
- 
-//  echo json_encode(['message' => 'Book added successfully']);
-//  break;
+
+case 'POST':
+    // Create operation (add a new user)
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    // Kode untuk menghasilkan kode lahan otomatis
+    $queryy = "SELECT kode_lahan FROM data_lahan ORDER BY kode_lahan DESC LIMIT 1";
+    $resultt = mysqli_query($koneksi, $queryy);
+
+    if ($resultt) {
+        $row = mysqli_fetch_assoc($resultt);
+        if ($row) {
+            $lastCode = $row['kode_lahan'];
+            $lastNumber = (int)substr($lastCode, 2);
+            $newNumber = $lastNumber + 1;
+
+            if ($newNumber < 10) {
+                $newCode = "KL000" . $newNumber;
+            } elseif ($newNumber < 100) {
+                $newCode = "KL00" . $newNumber;
+            } else {
+                $newCode = "KL0" . $newNumber;
+            }
+        } else {
+            $newCode = "KL0001";
+        }
+    } else {
+        $newCode = "KL0001";
+    }
+
+    // Assign generated kode_lahan to the data
+    $data['kode_lahan'] = $newCode;
+
+    // Insert data into the database
+    $stmt = $pdo->prepare('INSERT INTO data_lahan (kode_lahan, user, varietas_pohon, total_bibit, luas_lahan, tanggal, ketinggian_tanam, lokasi_lahan, longtitude, latitude) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+    $stmt->execute([$data['kode_lahan'], $data['user'], $data['varietas_pohon'], $data['total_bibit'], $data['luas_lahan'], $data['tanggal'], $data['ketinggian_tanam'], $data['lokasi_lahan'], $data['longtitude'], $data['latitude']]);
+
+    echo json_encode(['message' => 'Data User Berhasil Ditambah']);
+    break;
+
 
 //  case 'PUT':
 //  // Update operation (edit a book)
