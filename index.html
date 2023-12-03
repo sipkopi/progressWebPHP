@@ -317,6 +317,205 @@ width: 80%;
 </section>
 
 
+<style>
+
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
+:root {
+  --blue: #79A9F5;
+  --indigo: #C45F90;
+  --purple: #A16AE8;
+  --pink: #FC8BC0;
+  --red: #F85C70;
+  --orange: #FF8882;
+  --yellow: #FAD02C;
+  --green: #A3C14A;
+  --teal: #20c997;
+  --cyan: #47D8E0;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #F85C70;
+  --secondary: #6c757d;
+  --success: #A3C14A;
+  --info: #47D8E0;
+  --warning: #FF8882;
+  --danger: #F85C70;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Source Sans Pro", sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.blog-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  
+  display: flex;
+  text-align: left;
+  border: 1px solid #dee2e6;
+  margin-bottom: 30px;
+  overflow: hidden;
+  margin: 0 15px 30px ;
+  font-family:"source sans pro" ;
+  line-height: 1.5; /* Menambahkan properti line-height */
+  
+}
+.container{
+	margin-right: 20px;
+}
+.mb-5{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.blog-card p {
+  line-height: 1.5;
+}
+.blog-card .img-holder {
+  min-width: 250px;
+  max-width: 350px;
+  margin-right: 10px;
+  object-fit: cover;
+  
+}
+
+.blog-card .img-holder img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+	
+}
+
+.blog-card .content-holder {
+  padding: 30px 20px 30px 30px;
+  margin-left: 0;
+}
+
+
+.blog-card .content-holder .title {
+  font-weight: 500;
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+.blog-card .content-holder .post-details {
+  margin: 15px 0 15px !important;
+}
+
+.blog-card .content-holder .post-details i {
+  display: inline-block;
+  width: 15px;
+}
+
+.blog-card .content-holder .post-details a {
+  margin-right: 10px;
+  color: #444;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  opacity: .7;
+  font-size: 13px;
+}
+
+.blog-card .content-holder .read-more {
+  text-decoration: none;
+  margin-top: 20px;
+  display: block;
+  font-size: 17px;
+  font-family: "Source sans pro";
+  color: green;
+}
+
+.blog-card .content-holder .read-more i {
+  position: relative;
+  top: 1px;
+  font-size: 1.5em;
+  
+}
+
+@media (max-width: 991.98px) {
+  .blog-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog-card .img-holder {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+</style>
+
+<section class="section" id="blog">
+	<div class="container">
+		<h2 class="mb-5" >Latest <span class="text-danger">News</span></h2>
+		<div class="row">
+			<div class="blog-card">
+				<div class="img-holder">
+					<img src="assetsFN/images/leoo1.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+				</div>
+				<div class="content-holder">
+					<h6 class="title">Rekomendasi  caffe yang sering dikunjungi  selebgram</h6>
+
+					<p class="post-details">
+						<a href="#">By: Admin</a>
+					</p>
+					
+					<p>Cafe favorit selebgram menawarkan kombinasi unik: makanan lezat dan dekorasi estetis. Dengan tampilan instagrammable dan hidangan yang menarik, tempat ini jadi magnet bagi selebgram yang suka berbagi pengalaman kuliner. Dengan sudut-sudut fotogenik dan cita rasa yang menggoda, cafe-cafe ini tak terhindar dari perhatian para selebgram.</p>
+					<a href="https://erawisata.com/kuliner/cafe-hits-di-bondowoso/" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+				</div>
+			</div><!-- end of blog wrapper -->
+
+			<!-- blog-card -->
+			<div class="blog-card">
+				<div class="img-holder">
+					<img src="assetsFN/images/leoo2.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+				</div>
+				<div class="content-holder">
+					<h6 class="title">Ciri Kopi Arabika Bondowoso Yang Berkualitas Tinggi</h6>
+
+					<p class="post-details">
+						<a href="#">By: Admin</a>
+						
+					</p>
+					
+					<p>Kualitas kopi tergantung pada banyak faktor, termasuk asal biji, proses pemanggangan, dan cara penyeduhan, yang menghasilkan rasa yang unik dan kompleks. Kopi yang berkualitas tinggi biasanya memiliki aroma segar, cita rasa yang khas, serta keharmonisan antara asam, manis, dan pahit yang seimbang.</p>
+
+					<a href="https://www.journaluniversity.com/ciri-kopi-arabika-bondowoso/" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+				</div>
+			</div><!-- end of blog wrapper -->
+			<!-- blog-card -->
+			<div class="blog-card">
+				<div class="img-holder">
+					<img src="assetsFN/images/leoo3.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+				</div>
+				<div class="content-holder">
+					<h4 class="title">Gubernur Khofifah: Bondowoso penghasil kopi terbesar di Jawa Timur</h4>
+
+					<p class="post-details">
+						<a href="#">By: Admin</a>
+						
+					</p>
+					
+					<p>Melalui BUMD dan Trading House Kopi ini, lanjutnya, maka Kabupaten Bondowoso bisa menentukan stabilisasi  harga kopi. Tidak lagi Kopi Bondowoso ditentukan harganya oleh pihak  lain, tetapi harga kopi bisa ditentukan trading house  Republik Kopi Bondowoso.</p>
+
+					<a href="https://www.antaranews.com/berita/3592740/gubernur-khofifah-bondowoso-penghasil-kopi-terbesar-di-jawa-timur" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+				</div>
+			</div><!-- end of blog wrapper -->
+
+		</div>
+	</div>
+</section>
 
 <section data-bs-version="5.1" class="footer1 cid-tVmLSZ2TgD" once="footers" id="footer01-9">
 
@@ -385,10 +584,10 @@ width: 80%;
 					<strong>Support</strong>
 				</h5>
 				<ul class="list mbr-fonts-style display-7">
-					<li class="mbr-text item-wrap">Help</li>
-					<li class="mbr-text item-wrap">Info</li>
+					<li class="mbr-text item-wrap"><a href="index.html#" class="text-success">FAQ</a></li>
+					<li class="mbr-text item-wrap"><a href="index.html#blog" class="text-success">News</a></li>
 					<li class="mbr-text item-wrap"><a href="Contacts.html#contacts01-v" class="text-success">Contact Us</a></li>
-					<li class="mbr-text item-wrap"></li>
+					
 				</ul>
 			</div>
 			<hr class="bg-dark mt-4">
