@@ -15,12 +15,17 @@ switch ($method) {
 //  case 'POST':
 //  // Create operation (add a new book)
 //  $data = json_decode(file_get_contents('php://input'), true);
-//  $title = $data['title'];
-//  $author = $data['author'];
-//  $published_at = $data['published_at'];
- 
-//  $stmt = $pdo->prepare('INSERT INTO books (title, author, published_at) VALUES (?, ?, ?)');
-//  $stmt->execute([$title, $author, $published_at]);
+//  $kode_peremajaan = $data['kode_peremajaan'];
+//  $kode_lahan = $data['kode_lahan'];
+//  $perlakuan = $data['perlakuan'];
+//  $tanggal = $data['tanggal'];
+//  $kebutuhan = $data['kebutuhan'];
+//  $pupuk = $data['pupuk'];
+
+// //  INSERT INTO `data_peremajaan` (`kode_peremajaan`, `kode_lahan`, `perlakuan`, `tanggal`, `kebutuhan`, `pupuk`) VALUES ('$kode_peremajaan', '$kode_lahan', '$perlakuan', '$tanggal', '$kebutuhan', '$pupuk');
+
+//  $stmt = $pdo->prepare('INSERT INTO `data_peremajaan` (kode_peremajaan, kode_lahan, perlakuan, tanggal, kebutuhan, pupuk) VALUES (?, ?, ?, ?, ?, ?)');
+//  $stmt->execute([$kode_peremajaan, $kode_lahan, $perlakuan, $tanggal, $kebutuhan, $pupuk]);
  
 //  echo json_encode(['message' => 'Book added successfully']);
 //  break;
@@ -55,3 +60,5 @@ switch ($method) {
 //  break;
 }
 ?>
+
+
